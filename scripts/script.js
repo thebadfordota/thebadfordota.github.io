@@ -1,47 +1,69 @@
-let pageSlider = new Swiper('.main_slider', {
-    slideClass: "body_bg",
-    wrapperClass: "wrapper_slider",
+if (location.pathname != '/sources.html') {
+    let pageSlider = new Swiper('.main_slider', {
+        slideClass: "body_bg",
+        wrapperClass: "wrapper_slider",
 
-    direction: 'vertical',
+        direction: 'vertical',
 
-    sliderPerView: 'auto',
+        sliderPerView: 'auto',
 
-    keyboard: {
+        keyboard: {
 
-        enabled: true,
+            enabled: true,
 
-        onlyInViewport: true,
+            onlyInViewport: true,
 
-        pageUpDown: true,
-    },
+            pageUpDown: true,
+        },
 
-    mousewheel: {
+        mousewheel: {
 
-        sensitivity: 1,
-    },
+            sensitivity: 1,
+        },
 
-    pagination: {
-        el: '.pagination',
-        type: "bullets",
-        clickable: true,
-        bulletClass: "bullet",
-        bulletActiveClass: "bulletActive",
-    },
+        pagination: {
+            el: '.pagination',
+            type: "bullets",
+            clickable: true,
+            bulletClass: "bullet",
+            bulletActiveClass: "bulletActive",
+        },
 
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
 
-    scrollbar: {
-        el: ".scroll",
-        dragClass: "drag_scroll",
-        draggable: true,
-    },
+        scrollbar: {
+            el: ".scroll",
+            dragClass: "drag_scroll",
+            draggable: true,
+        },
 
-    speed: 900,
+        speed: 900,
 
-    hashNavigation: {
-        watchState: true,
-    },
+        hashNavigation: {
+            watchState: true,
+        },
 
-});
+    });
+}
+
+if (location.pathname == '/' || location.pathname == '/index.html') {
+    $(document).ready(function () {
+        setTimeout(function () {
+            $(".load").fadeOut(500);
+        }, 2200);
+        setTimeout(function () {
+            $(".load").remove();
+        }, 2800);
+    });
+} else {
+    $(document).ready(function () {
+                setTimeout(function () {
+            $(".load").fadeOut(200);
+        }, 0);
+        setTimeout(function () {
+            $(".load").remove();
+        }, 200);
+    });
+}
