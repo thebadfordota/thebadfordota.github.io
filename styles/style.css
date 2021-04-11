@@ -279,6 +279,7 @@ img:hover {
     justify-content: space-between;
     transition: transform 450ms ease-in-out 0ms;
     border-radius: 8px;
+    color: #212529;
 }
 
 .o1 {
@@ -362,6 +363,7 @@ img:hover {
 
 .grid_object:hover {
     text-decoration: none;
+    color: #212529;
 }
 
 .grid_object::before {
