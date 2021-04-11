@@ -3,6 +3,15 @@
 .logo {
     font-family: "Russo One";
     font-size: 22px;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text !important;
+    background-clip: text !important;
+    color: #000;
+    -webkit-text-fill-color: transparent;
+    -moz--text-fill-color: transparent;
+    animation: shine 10s linear infinite;
+    background: linear-gradient(to right, #d60099 0%, #6c2cb0 30%, #8c00ff 50%, #8204ca 70%, #d60099 100%);
+    background-size: 300% auto;
 }
 
 h1,
@@ -185,6 +194,7 @@ button {
     font-family: "Ubuntu";
     font-size: 20px;
 }
+
 .body_bg ol li {
     font-family: "Ubuntu";
     font-size: 20px;
@@ -423,4 +433,11 @@ img:hover {
 .bg_desc h1 {
     color: white;
     text-shadow: 0px 2px 0 rgb(0, 0, 0), 0px -2px 0 rgb(0, 0, 0), 2px 0px 0 rgb(0, 0, 0), -2px 0px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0);
+}
+
+@keyframes shine {
+    100% {
+
+        background-position: 300% center;
+    }
 }
